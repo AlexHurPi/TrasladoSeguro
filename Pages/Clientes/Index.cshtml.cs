@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.EntityFrameworkCore;
 using TrasladoSeguro.Data;
-using TrasladoSeguro.Migrations;
 using TrasladoSeguro.Models;
 
 namespace TrasladoSeguro.Pages.Clientes
