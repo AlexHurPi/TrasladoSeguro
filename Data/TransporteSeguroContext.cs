@@ -11,6 +11,7 @@ namespace TrasladoSeguro.Data
 
 		public DbSet<Cliente> Clientes { get; set; }
 		public DbSet<ServiceType> ServiceTypes { get; set; }
+		public DbSet<User> Users { get; set; }
 
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
