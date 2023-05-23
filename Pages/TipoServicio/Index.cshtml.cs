@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -7,6 +8,7 @@ using TrasladoSeguro.Models;
 
 namespace TrasladoSeguro.Pages.TipoServicio
 {
+    [Authorize]
     public class IndexModel : PageModel
     {        
             private readonly TransporteSeguroContext _context;
