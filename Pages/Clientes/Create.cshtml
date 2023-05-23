@@ -1,0 +1,38 @@
+﻿@page
+@model TrasladoSeguro.Pages.Clientes.CreateModel
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Clients</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Cliente.Name" class="control-label"></label>
+				<input asp-for="Cliente.Name" class="form-control" />
+				<span asp-validation-for="Cliente.Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Cliente.Identification" class="control-label"></label>
+				<input asp-for="Cliente.Identification" class="form-control" />
+				<span asp-validation-for="Cliente.Identification" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3">
+				<input type="submit" value="Create" class="btn btn-success" />
+				<a asp-page="Index" class="btn btn-primary"> Back to List</a>
+			</div>
+		</form>
+	</div>
+
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
