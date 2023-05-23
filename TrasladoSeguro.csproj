@@ -24,6 +24,7 @@
     <Folder Include="Pages\Drivers\" />
     <Folder Include="Pages\Users\" />
     <Folder Include="Pages\TipoServicio\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>

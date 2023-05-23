@@ -11,8 +11,8 @@ using TrasladoSeguro.Data;
 namespace TrasladoSeguro.Migrations
 {
     [DbContext(typeof(TransporteSeguroContext))]
-    [Migration("20230523033057_user")]
-    partial class user
+    [Migration("20230523191331_AllDatabase")]
+    partial class AllDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,27 @@ namespace TrasladoSeguro.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("TrasladoSeguro.Models.Driver", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Identification")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Drivers");
                 });
 
             modelBuilder.Entity("TrasladoSeguro.Models.ServiceType", b =>
