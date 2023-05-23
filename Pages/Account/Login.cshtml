@@ -2,6 +2,10 @@
 @model TrasladoSeguro.Pages.Account.LoginModel
 @{
 }
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
 <form method="post">
     <div class="text-danger" asp-validation-summary="ModelOnly"></div>
     <div class="mb-3">
