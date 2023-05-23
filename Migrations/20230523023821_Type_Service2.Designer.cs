@@ -11,8 +11,8 @@ using TrasladoSeguro.Data;
 namespace TrasladoSeguro.Migrations
 {
     [DbContext(typeof(TransporteSeguroContext))]
-    [Migration("20230522220843_Create_Database")]
-    partial class Create_Database
+    [Migration("20230523023821_Type_Service2")]
+    partial class Type_Service2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,27 @@ namespace TrasladoSeguro.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("TrasladoSeguro.Models.ServiceType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ServiceTypes");
                 });
 #pragma warning restore 612, 618
         }

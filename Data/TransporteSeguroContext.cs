@@ -10,9 +10,10 @@ namespace TrasladoSeguro.Data
 		}
 
 		public DbSet<Cliente> Clientes { get; set; }
+		public DbSet<ServiceType> ServiceTypes { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
            optionsBuilder.UseSqlServer(
             "Server=(Localdb)\\mssqllocaldb;Database=TransporteSeguro;Trusted_Connection=True;");
