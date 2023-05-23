@@ -16,13 +16,13 @@ namespace TrasladoSeguro.Pages.TipoServicio
                 _context = context;
             }
 
-            public IList<Cliente> Clientes { get; set; } = default!;
+            public IList<ServiceType> ServiceType { get; set; } = default!;
 
             public async Task OnGetAsync()
             {
-                if (_context.Clientes != null)
+                if (_context.ServiceTypes != null)
                 {
-                    Clientes = await _context.Clientes.ToListAsync();
+				ServiceType = await _context.ServiceTypes.ToListAsync();
                 }
             }
     }
