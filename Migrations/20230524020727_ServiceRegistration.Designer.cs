@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrasladoSeguro.Data;
 
@@ -10,9 +11,11 @@ using TrasladoSeguro.Data;
 namespace TrasladoSeguro.Migrations
 {
     [DbContext(typeof(TransporteSeguroContext))]
-    partial class TransporteSeguroContextModelSnapshot : ModelSnapshot
+    [Migration("20230524020727_ServiceRegistration")]
+    partial class ServiceRegistration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
