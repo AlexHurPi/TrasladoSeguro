@@ -13,7 +13,7 @@ namespace TrasladoSeguro.Data
 		public DbSet<ServiceType> ServiceTypes { get; set; }
 		public DbSet<User> Users { get; set; }
         public DbSet<Driver> Drivers { get; set; }
-
+        public DbSet<ServiceRegistration> ServiceRegistrations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

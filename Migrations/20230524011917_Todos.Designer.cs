@@ -11,8 +11,8 @@ using TrasladoSeguro.Data;
 namespace TrasladoSeguro.Migrations
 {
     [DbContext(typeof(TransporteSeguroContext))]
-    [Migration("20230523191331_AllDatabase")]
-    partial class AllDatabase
+    [Migration("20230524011917_Todos")]
+    partial class Todos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

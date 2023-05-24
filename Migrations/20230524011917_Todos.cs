@@ -5,7 +5,7 @@
 namespace TrasladoSeguro.Migrations
 {
     /// <inheritdoc />
-    public partial class AllDatabase : Migration
+    public partial class Todos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
