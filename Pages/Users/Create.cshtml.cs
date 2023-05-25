@@ -19,6 +19,7 @@ namespace TrasladoSeguro.Pages.Users
 		{
 			return Page();
 		}
+        
 		[BindProperty]
 
 		public User User { get; set; } = default!;
@@ -32,8 +33,7 @@ namespace TrasladoSeguro.Pages.Users
 
 			_context.Users.Add(User);
 			await _context.SaveChangesAsync();
-
-			return RedirectToPage("./Index");
+            return RedirectToPage("./Index");
 		}
 	}
 }

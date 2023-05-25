@@ -15,8 +15,8 @@ namespace TrasladoSeguro.Pages.Account
         {
             _context = context;
         }
-        [TempData]
-        public string ErrorMessage { get; set; }
+        [TempData]//para pober mensaje de error
+        public string ErrorMessage { get; set; }//para poner mensaje de error
         [BindProperty]
         public User User { get; set; }
         public void OnGet()
@@ -46,7 +46,7 @@ namespace TrasladoSeguro.Pages.Account
                     return RedirectToPage("/index");
                 }
             }
-            ErrorMessage = "Correo o contraseña incorrectos.";
+            ErrorMessage = "Correo o contraseña incorrectos.";//para poner mensaje de error 
             return Page();
         }
     }
