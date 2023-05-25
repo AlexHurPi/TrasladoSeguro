@@ -11,8 +11,8 @@ using TrasladoSeguro.Data;
 namespace TrasladoSeguro.Migrations
 {
     [DbContext(typeof(TransporteSeguroContext))]
-    [Migration("20230524020727_ServiceRegistration")]
-    partial class ServiceRegistration
+    [Migration("20230524031937_Ajuste")]
+    partial class Ajuste
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,32 +74,28 @@ namespace TrasladoSeguro.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ClienteId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ClienteIdentification")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClienteName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Date")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DriverId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("DriverIdentification")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DriverName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ServiceTypeId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ServiceTypeName")
+                    b.Property<string>("ServiceType")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
