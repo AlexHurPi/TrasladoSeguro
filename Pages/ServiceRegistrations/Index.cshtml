@@ -15,29 +15,21 @@
 			<th>
 				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].Date)
 			</th>
+			
 			<th>
-				@Html.DisplayNameFor(model => model.ServiceRegistrations[1].ClienteId)
+				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].ClienteIdentification)
 			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].ClienteName)
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].ClienteIdentification)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.ServiceRegistrations[1].DriverId)
+				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].DriverIdentification)
 			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].DriverName)
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].DriverIdentification)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.ServiceRegistrations[1].ServiceTypeId)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].ServiceTypeName)
+				@Html.DisplayNameFor(model => model.ServiceRegistrations[0].ServiceType)
 			</th>
 			<th>Actions</th>
 		</tr>
@@ -49,29 +41,21 @@
 				<td>
 					@Html.DisplayFor(modelItem => item.Date)
 				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.ClienteId)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.ClienteName)
-				</td>
+			
 				<td>
 					@Html.DisplayFor(modelItem => item.ClienteIdentification)
 				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.DriverId)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.DriverName)
-				</td>
+					<td>
+					@Html.DisplayFor(modelItem => item.ClienteName)
+					</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.DriverIdentification)
 				</td>
+					<td>
+					@Html.DisplayFor(modelItem => item.DriverName)
+					</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.ServiceTypeId)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.ServiceTypeName)
+					@Html.DisplayFor(modelItem => item.ServiceType)
 				</td>
 				<td>
 					<a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>

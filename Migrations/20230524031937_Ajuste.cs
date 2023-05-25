@@ -5,11 +5,12 @@
 namespace TrasladoSeguro.Migrations
 {
     /// <inheritdoc />
-    public partial class ServiceRegistration : Migration
+    public partial class Ajuste : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.CreateTable(
                 name: "ServiceRegistrations",
                 columns: table => new
@@ -17,26 +18,28 @@ namespace TrasladoSeguro.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Date = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClienteId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClienteName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClienteIdentification = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DriverId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DriverName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DriverIdentification = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ServiceTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ServiceTypeName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ClienteIdentification = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ClienteName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DriverIdentification = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DriverName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ServiceType = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ServiceRegistrations", x => x.Id);
                 });
+
+           
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+           
             migrationBuilder.DropTable(
                 name: "ServiceRegistrations");
+
+           
         }
     }
 }
